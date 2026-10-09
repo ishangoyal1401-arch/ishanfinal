@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMate — Trusted Local Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ishan.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a href="#" class="brand"><span class="brand-icon">✦</span><span>Task<span class="brand-accent">Mate</span></span></a>
+    <nav class="desktop-links"><a href="#services">Services</a><a href="#pros">Top Pros</a><a href="#how">How it works</a></nav>
+    <div class="nav-actions">
+      <button class="location-btn" id="locationBtn" type="button">📍 <span id="currentCity">Bengaluru</span>⌄</button>
+      <button class="login-btn" id="loginBtn" type="button">Log in</button>
+      <button class="primary-btn small" id="signupBtn" type="button">Sign up</button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+  <div id="mobileNav" class="mobile-nav">
+    <a href="#services">Services</a><a href="#pros">Top Pros</a><a href="#how">How it works</a>
+    <button id="mobileLogin" type="button">Log in</button><button id="mobileSignup" type="button">Sign up</button>
+  </div>
+  <div id="locationMenu" class="location-menu">
+    <button data-city="Bengaluru" type="button">Bengaluru</button><button data-city="Mumbai" type="button">Mumbai</button>
+    <button data-city="Delhi" type="button">Delhi</button><button data-city="Chandigarh" type="button">Chandigarh</button>
+    <button data-city="Chennai" type="button">Chennai</button>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div>
+    <div class="container hero-content">
+      <div class="trust-pill">✓ &nbsp; Trusted local professionals · Simple booking</div>
+      <h1>Get things done.<br><span>Without the hassle.</span></h1>
+      <p>Find local professionals, compare ratings and starting prices, and book the right person for the job.</p>
+      <form class="search-box" id="searchForm">
+        <label class="search-field"><span>⌕</span><input id="searchInput" type="search" placeholder="What service do you need?" autocomplete="off"></label>
+        <div class="search-field location-field"><span>📍</span><select id="citySelect" aria-label="Choose city"><option>Bengaluru</option><option>Mumbai</option><option>Delhi</option><option>Chandigarh</option><option>Chennai</option></select></div>
+        <button class="primary-btn search-btn" id="findBtn" type="submit">Find professionals →</button>
+      </form>
+      <div class="popular"><span>Popular:</span><button data-search="AC Service" type="button">AC Service</button><button data-search="Cleaning" type="button">Home Cleaning</button><button data-search="Plumbing" type="button">Plumbing</button><button data-search="Electrical" type="button">Electrical</button></div>
+      <div class="hero-proof"><span>★★★★★</span> <b>4.8/5 average rating</b><i>•</i> Local demo listings</div>
+    </div>
+    <div class="hero-art" aria-hidden="true"><div class="art-orb"></div><div class="art-tool">🧰</div><div class="float-card float-top">✓ Verified professionals</div><div class="float-card float-bottom"><span>★ 4.9</span> Top-rated local help</div></div>
+  </section>
+  <section class="stats"><div class="container stats-grid"><div><strong>5</strong><span>Cities to explore</span></div><div><strong>4.8/5</strong><span>Average rating</span></div><div><strong>24/7</strong><span>Browse any time</span></div><div><strong>₹0</strong><span>Demo booking fee</span></div></div></section>
+  <section id="services" class="section"><div class="container"><div class="section-heading"><div><span class="eyebrow">EXPLORE SERVICES</span><h2>Whatever you need,<br>we've got a pro.</h2><p>Choose a category to filter professionals.</p></div><button class="text-btn" id="showAllBtn" type="button">View all →</button></div><div id="categoryGrid" class="category-grid"></div></div></section>
+  <section id="pros" class="section pros-section"><div class="container"><div class="section-heading"><div><span class="eyebrow">LOCAL EXPERTS</span><h2>Top professionals in <span id="prosCity">Bengaluru</span></h2><p>Compare ratings, experience and starting prices.</p></div><div class="result-count" id="resultCount"></div></div><div id="prosGrid" class="pros-grid"></div><div id="emptyState" class="empty-state hidden"><div class="empty-icon">⌕</div><h3>No professionals found</h3><p>Try another service or clear your search.</p><button class="secondary-btn" id="clearSearch" type="button">Clear search</button></div></div></section>
+  <section id="how" class="section how-section"><div class="container"><div class="center-heading"><span class="eyebrow">HOW TASKMATE WORKS</span><h2>Simple. Safe. Done.</h2></div><div class="steps"><article class="step"><div class="step-num">01</div><div class="step-icon">⌕</div><h3>Choose your pro</h3><p>Compare ratings, completed jobs and experience before choosing.</p></article><article class="step"><div class="step-num">02</div><div class="step-icon">▣</div><h3>Confirm your booking</h3><p>Review the starting price and confirm your demo booking.</p></article><article class="step"><div class="step-num">03</div><div class="step-icon">✓</div><h3>Keep it simple</h3><p>Your booking reference is saved in this browser for this demo.</p></article></div></div></section>
+  <section class="section reviews-section"><div class="container"><div class="center-heading"><span class="eyebrow">CUSTOMER STORIES</span><h2>Good help makes all the difference.</h2></div><div id="reviewsGrid" class="reviews-grid"></div></div></section>
+  <section class="cta-section"><div class="container cta"><div><span class="eyebrow">ARE YOU A PROFESSIONAL?</span><h2>Turn your skills into your next customer.</h2><p>Explore how a professional profile could work on TaskMate.</p></div><button class="primary-btn" id="proSignup" type="button">Join as a professional →</button></div></section>
+</main>
+<footer><div class="container footer-grid"><div><a class="brand footer-brand" href="#"><span class="brand-icon">✦</span><span>Task<span class="brand-accent">Mate</span></span></a><p>Trusted local services, without the uncertainty.</p></div><div><h4>For customers</h4><a href="#services">Browse services</a><a href="#how">How it works</a><a href="#pros">Find a pro</a></div><div><h4>For professionals</h4><a href="#" id="footerPro">Join TaskMate</a><a href="#how">How it works</a></div><div><h4>Support</h4><a href="#" id="helpLink">Help center</a><a href="#" id="safetyLink">Trust & Safety</a></div></div><div class="container footer-bottom"><span>© 2026 TaskMate. Demo website.</span><span>Made with ♥ in India</span></div></footer>
+
+<div id="bookingModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="bookingName"><div class="modal-card"><button class="close" data-close="bookingModal" type="button" aria-label="Close">×</button><div id="bookingContent"><span class="eyebrow">BOOKING PREVIEW</span><h2 id="bookingName">Professional</h2><p id="bookingRole" class="muted"></p><div class="price-box"><span>Starting price</span><strong id="bookingPrice"></strong></div><div class="protection"><div>✓</div><p><strong>Clear booking details</strong><br>This is a demo booking. No payment is collected.</p></div><button class="primary-btn full" id="confirmBooking" type="button">Confirm demo booking</button><small class="fine-print">No real professional is contacted.</small></div><div id="bookingSuccess" class="success hidden"><div class="success-icon">✓</div><h2>Booking confirmed!</h2><p>Your booking with <strong id="successName"></strong> has been saved in this browser.</p><p class="booking-id">Booking ID: <strong id="bookingId"></strong></p><button class="secondary-btn full" id="openDispute" type="button">Report an issue</button><button class="primary-btn full" data-close="bookingModal" type="button">Done</button></div></div></div>
+
+<div id="disputeModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="disputeHeading"><div class="modal-card"><button class="close" data-close="disputeModal" type="button" aria-label="Close">×</button><span class="eyebrow red">SUPPORT</span><h2 id="disputeHeading">Report a problem</h2><p class="muted">Your report will be saved locally in this browser.</p><label class="form-label" for="disputeReason">Reason<select id="disputeReason" class="form-control"><option>Job not completed</option><option>Quality issue</option><option>Price concern</option><option>Professional did not arrive</option><option>Other</option></select></label><label class="form-label" for="disputeNote">Details<textarea id="disputeNote" class="form-control" placeholder="Briefly describe the issue…"></textarea></label><button class="danger-btn full" id="submitDispute" type="button">Submit report</button></div></div>
+<div id="infoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="infoTitle"><div class="modal-card info-card"><button class="close" data-close="infoModal" type="button" aria-label="Close">×</button><div class="info-icon">✦</div><h2 id="infoTitle">Welcome to TaskMate</h2><p id="infoText"></p><button class="primary-btn full" data-close="infoModal" type="button">Got it</button></div></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="ishan.js"></script>
+</body>
+</html>
